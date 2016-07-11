@@ -1,9 +1,32 @@
 <html>
 	<head>
 		<title>Welcome to Durlabh Sharma's Site</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	</head>
-	
+		
 	<body>
-		<div>Probably an ugly site. But I don't care. I love it. </div>
+		<div class="typewriter">Probably an ugly site. But I don't care. I love it.</div>
 	</body>
+	<script>
+		var text = $('.typewriter').text();
+
+		var length = text.length;
+		var timeOut;
+		var character = 0;
+
+
+	(function typeWriter() { 
+		timeOut = setTimeout(function() {
+			character++;
+			var type = text.substring(0, character);
+			$('.typewriter').text(type);
+			typeWriter();
+			
+			if (character == length) {
+				clearTimeout(timeOut);
+			}
+			
+		}, 200);
+	}());
+</script>
 </html>
