@@ -1,16 +1,18 @@
 <html>
 	<head>
 		<title>Welcome to Durlabh Sharma's Site</title>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="/js/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/css/homepage.css" />
 	</head>
 		
 	<body>
-		<div class="typewriter">Probably an ugly site. But I don't care. I love it.</div>
+		<div class="center typewriter"></div>
+		
 	</body>
 	<script>
-		var text = $('.typewriter').text();
-
+		var text = "Probably an ugly site. But I don't care. I love it. <br> Want to see a slightly better version?<br><button type='button'>Click Me!</button>";
 		var length = text.length;
+		
 		var timeOut;
 		var character = 0;
 
@@ -19,7 +21,7 @@
 		timeOut = setTimeout(function() {
 			character++;
 			var type = text.substring(0, character);
-			$('.typewriter').text(type);
+			$('.typewriter').html(type);
 			typeWriter();
 			
 			if (character == length) {
