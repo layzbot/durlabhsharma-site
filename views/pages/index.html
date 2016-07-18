@@ -10,12 +10,11 @@
 		
 	</body>
 	<script>
-		var text = "Probably an ugly site. But I don't care. I love it. <br> Want to see a slightly better version?<br><br><button type='button' class='click-me'>Click Me!</button>";
+		var text = "Probably an ugly site. But I don't care. I love it. <br> Want to see a slightly better version?<br><br><button type='button' class='click-me' id='button-id'>Click Me!</button>";
 		var length = text.length;
 		
 		var timeOut;
 		var character = 0;
-
 
 	(function typeWriter() { 
 		timeOut = setTimeout(function() {
@@ -29,6 +28,11 @@
 			}
 			
 		}, 200);
-	}());
+	})();
+	
+	$('.typewriter').delegate("button","click",function(){
+		alert(1);
+	});
+	
 </script>
 </html>
