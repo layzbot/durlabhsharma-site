@@ -7,7 +7,7 @@
   },
   "main": "bin/server.js",
   "scripts": {
-    "start": "node bin/server.js"
+    "postinstall": "./node_modules/bower/bin/bower install"
 	},
   "dependencies": {
     "ejs": "2.4.1",
