@@ -8,7 +8,7 @@
   "main": "bin/server.js",
   "scripts": {
 		"start" : "node bin/server.js",
-		"postinstall": "npm install bower & bower install"
+		"postinstall": "bower install"
 	},
   "dependencies": {
     "ejs": "2.4.1",
