@@ -4,12 +4,15 @@ var app = express();
 //Routes begin
 var index = require('./routes');
 var about = require('./routes/about');
+var api = require('./routes/api');
 
 app.use('/', index);
 app.use('/about', about);
+app.use('/api', api);
 //Routes end
 
 app.use(express.static(__dirname + '/public'));
+app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');

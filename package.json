@@ -5,13 +5,13 @@
   "engines": {
     "node": "5.9.1"
   },
-  "main": "index.js",
+  "main": "bin/server.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node bin/server.js"
   },
   "dependencies": {
     "ejs": "2.4.1",
-    "express": "4.13.3"
+    "express": "4.13.3",
   },
   "repository": {
     "type": "git",
