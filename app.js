@@ -16,6 +16,8 @@ app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
 
+
+//Error Page Routing
 app.use(function(request, response, next) {
 	var err = new Error('Page Not Found');
 	err.status=404;
