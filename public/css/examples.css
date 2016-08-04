@@ -260,7 +260,6 @@ p{
 	position: absolute;
 	height: 413px;
 	width: 258px;
-	background-image: url(imgs/colors.gif);
 	background-repeat: no-repeat;
 }
 
@@ -285,14 +284,14 @@ p{
 	margin: 0 auto;
 	right: 0;
 }
-#colors2{
+/*#colors2{
 	background-image: url(imgs/colors2.gif);
 	top:0;
 }
 #colors3{
 	background-image: url(imgs/colors3.gif);
 	bottom:0;
-}
+}*/
 
 /* Section 4
  * --------------------------------------- */
