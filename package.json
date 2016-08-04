@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
-  "version": "0.2.5",
-  "description": "A sample Node.js app using Express 4",
+  "name": "durlabh-sharma-website",
+  "version": "0.1.2",
+  "description": "Durlabh Sharma's Personal Website",
   "engines": {
     "node": "5.9.1"
   },
