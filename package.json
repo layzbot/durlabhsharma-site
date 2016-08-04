@@ -7,7 +7,7 @@
   },
   "main": "bin/server.js",
   "scripts": {
-    "postinstall": "./node_modules/bower/bin/bower install"
+    "postinstall": "bower cache clean && bower install"
 	},
   "dependencies": {
     "ejs": "2.4.1",
