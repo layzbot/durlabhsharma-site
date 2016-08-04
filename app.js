@@ -5,8 +5,8 @@ var app = express();
 var index = require('./routes');
 var about = require('./routes/about');
 
-app.get('/', index);
-app.get('/about', about);
+app.use('/', index);
+app.use('/about', about);
 //Routes end
 
 app.use(express.static(__dirname + '/public'));

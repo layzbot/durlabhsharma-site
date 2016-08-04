@@ -1,8 +1,11 @@
 var express = require('express');
 var router = express.Router();
 
-router.get('/about', function(request, response, next) {
+router.get('/', function(request, response, next) {
 	response.render('pages/demoPage');
 });
 
+router.post('/', function(request, response, next) {
+	response.render('pages/index');
+});
 module.exports=router;
