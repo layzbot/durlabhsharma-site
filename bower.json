@@ -22,8 +22,5 @@
   "dependencies": {
     "angular": "1.5.8"
   },
-  "resolutions": {
-    "angular": "~1.5.8"
-  }
   "private": true
 }
