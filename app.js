@@ -12,7 +12,7 @@ app.use('/api', api);
 //Routes end
 
 app.use(express.static(__dirname + '/public'));
-app.use('/bower_components',  express.static(__dirname + '/bower_components'));
+app.use('/resources',  express.static(__dirname + '/bower_components'));
 
 // views is directory for all template files
 app.set('views', __dirname + '/views');
