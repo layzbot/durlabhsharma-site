@@ -5,10 +5,12 @@ var app = express();
 var index = require('./routes');
 var about = require('./routes/about');
 var api = require('./routes/api');
+var mailer = require('./routes/mailer');
 
 app.use('/', index);
 app.use('/about', about);
 app.use('/api', api);
+app.use('/mail', mailer);
 //Routes end
 
 app.use(express.static(__dirname + '/public'));
