@@ -4,7 +4,7 @@ var express = require('express');
 var router = express.Router();
 
 //Your sending email address
-var from_who = 'sharma.durlabh.93@gmail.com';
+var to = 'sharma.durlabh.93@gmail.com';
 
 var transporter = nodemailer.createTransport("SMTP",{
     service: "Mailgun",
@@ -21,18 +21,14 @@ var transporter = nodemailer.createTransport("SMTP",{
     } 
 });
 
-var mailOptions={
-  /* to : req.query.to,
-   subject : req.query.subject,
-   text : req.query.text*/
-   from:from_who,
-   to : from_who,
-   subject : "Node Mail Test",
-   text : "Node Test Mail Successful"
-}
-
-
-router.get('/send', function(request, res, next){
+router.post('/send', function(req, res, next){
+	var mailOptions={
+		from : req.body.from,
+		to : to,
+		subject : req.body.subject,
+		text : req.body.message
+	}
+	
 	transporter.sendMail(mailOptions, function(error, response) {
 		if(error){
             console.log(error);

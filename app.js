@@ -1,5 +1,13 @@
 var express = require('express');
+var bodyParser = require('body-parser');
+
 var app = express();
+
+app.use(bodyParser.json() );       // to support JSON-encoded bodies
+app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
+
 
 //Routes begin
 var index = require('./routes');
@@ -20,6 +28,7 @@ app.use('/resources',  express.static(__dirname + '/bower_components'));
 app.set('views', __dirname + '/views');
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
+
 
 
 //Error Page Routing
