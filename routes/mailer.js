@@ -1,11 +1,11 @@
-var nodemailer = require("nodemailer");
+var nodemailer = require('nodemailer');
 var express = require('express');	
 
 var router = express.Router();
 
 //Your sending email address
 var to = 'sharma.durlabh.93@gmail.com';
-
+	
 var transporter = nodemailer.createTransport("SMTP",{
     service: "Mailgun",
 /*	
