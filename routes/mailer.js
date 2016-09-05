@@ -55,6 +55,14 @@ router.post('/send', function(req, res, next){
         	res.end("sent");
         }
 	}); 
+	
+	mail.save(function (err, mailObj) {
+	  if (err) {
+		console.log(err);
+	  } else {
+		console.log('saved successfully:', mailObj);
+	  }
+});
 });
 
 module.exports=router;
