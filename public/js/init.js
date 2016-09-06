@@ -146,7 +146,8 @@
       var contactSubject = $('#contactForm #contactSubject').val();
       var contactMessage = $('#contactForm #contactMessage').val();
 
-      var data = 'name=' + contactName + '&from=' + contactEmail +
+	  var from = contactName+" <"+contactEmail+">";
+      var data = 'name=' + contactName + '&from=' + from +
                '&subject=' + contactSubject + '&message=' + contactMessage;
 
       $.ajax({
