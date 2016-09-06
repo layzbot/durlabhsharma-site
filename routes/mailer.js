@@ -6,7 +6,7 @@ var database = require('../middleware/database');
 var router = express.Router();
 
 //Your sending email address
-var to = 'sharma.durlabh.93@gmail.com';
+var to = 'durlabh@durlabhsharma.in';
 var Email = database.model('Email', {name: String, from: String, subject: String, message: String});
 
 var transporter = nodemailer.createTransport("SMTP",{
