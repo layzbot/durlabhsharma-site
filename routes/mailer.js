@@ -5,25 +5,12 @@ var database = require('../middleware/database');
 
 var router = express.Router();
 
-//Your sending email address
 var to = 'durlabh@durlabhsharma.in';
 var Email = database.model('Email', {name: String, from: String, subject: String, message: String});
 
 var transporter = nodemailer.createTransport("SMTP",{
     service: "Mailgun",
-/*	
-	//Auth for Google
     auth: {
-        user: "sharma.durlabh.93@gmail.com",
-        pass: "pxgjleunlherbmmt"
-    } */ 
-	
-	/* auth: {
-        user: "postmaster@appd4cb8d5cc4c34ae893992007dd15cf85.mailgun.org",
-        pass: "9f8b1fcba8bf4d5bbdb749e473c8f57f"
-    } */
-
-     auth: {
         user: process.env.MAILGUN_SMTP_LOGIN,
         pass: process.env.MAILGUN_SMTP_PASSWORD
     } 
