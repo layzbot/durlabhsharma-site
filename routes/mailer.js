@@ -1,7 +1,7 @@
 var nodemailer = require('nodemailer');
 var express = require('express');	
 
-var database = require('../middleware/database');
+var database = require('../util/database');
 
 var router = express.Router();
 
