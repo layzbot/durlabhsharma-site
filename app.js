@@ -14,7 +14,7 @@ var index = require('./routes');
 var about = require('./routes/about');
 var api = require('./routes/api');
 var mailer = require('./routes/mailer');
-var logger = require('./util/logger')
+var logger = require('./middleware/logger');
 
 app.use('/', index);
 app.use('/about', about);
