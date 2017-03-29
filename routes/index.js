@@ -1,12 +1,10 @@
 var express = require('express');
 var router = express.Router();
-var twitter = require('../middleware/twitterUtil');
 
 router.get('/', function(request, response, next) {
-	var finalTweets;
-	var tweets = getTweets(function(finalTweets) {
-		response.render('pages/index', {tweets:finalTweets});
-	});	
+	
+	response.render('pages/index');
+	
 });
 
 router.get('/angular', function(request, response, next) {
