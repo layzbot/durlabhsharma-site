@@ -18,7 +18,8 @@
     "nodemailer": "0.7.1",
     "twitter":"1.7.0",
 	  "body-parser": "latest",
-	  "mongoose" : "latest"
+	  "mongoose" : "latest",
+    "jsonwebtoken":"latest"
   },
   "repository": {
     "type": "git",

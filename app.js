@@ -15,11 +15,13 @@ var about = require('./routes/about');
 var api = require('./routes/api');
 var mailer = require('./routes/mailer');
 var logger = require('./middleware/logger');
+var jwtroute = require('./routes/jwttest');
 
 app.use('/', index);
 app.use('/about', about);
 app.use('/api', api);
 app.use('/mail', mailer);
+app.use('/jwt', jwtroute);
 //Routes end
 
 app.use(express.static(__dirname + '/public'));
